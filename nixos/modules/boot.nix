@@ -1,6 +1,15 @@
-{
-  # boot.loader.systemd-boot.enable = true;
-
-  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
-  boot.loader.efi.canTouchEfiVariables = true;
+{ bootdevice, mountpoint, ... }: {
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = false;
+      efiSysMountPoint = mountpoint;
+    };
+    grub = {
+       enable = true;
+       efiSupport = true;
+       efiInstallAsRemovable = true;
+       device = bootdevice;
+       useOSProber = true;
+    };
+  };
 }

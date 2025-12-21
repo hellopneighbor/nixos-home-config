@@ -20,16 +20,17 @@
     system = "x86_64-linux";
     homeStateVersion = "25.11";
     user = "eugen";
+    
    
     hosts = [
-      { hostname = "nixbook"; stateVersion = "25.11"; }
-      { hostname = "nixos"; stateVersion = "25.11"; }
+      { hostname = "nixbook"; stateVersion = "25.11"; bootdevice = "/dev/sda"; mountpoint="/boot"; }
+      { hostname = "nixos"; stateVersion = "25.11"; bootdevice = "nodev"; mountpoint="/boot/efi"; }
     ];
 
-    makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
+    makeSystem = { hostname, stateVersion, bootdevice, mountpoint}: nixpkgs.lib.nixosSystem {
       system = system;
       specialArgs = {
-        inherit inputs stateVersion hostname user;
+        inherit inputs stateVersion hostname user bootdevice mountpoint;
       };
 
       modules = [
@@ -41,7 +42,7 @@
     nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
       configs // {
         "${host.hostname}" = makeSystem {
-          inherit (host) hostname stateVersion;
+          inherit (host) hostname stateVersion bootdevice mountpoint;
         };
       }) {} hosts;
 
