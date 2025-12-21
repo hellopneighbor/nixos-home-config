@@ -8,3 +8,6 @@ build:
 
 home:
 	nix run home-manager -- switch --flake .#$(MAKE_USER)
+
+link:
+	ln -sf $(shell pwd)/home-manager/home-packages.nix	~/Desktop/packages.nix

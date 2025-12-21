@@ -20,10 +20,6 @@
     lutris
     obs-studio
     simplescreenrecorder
-    htop
-    iotop
-    iftop
-    usbutils
     ];
 
 }

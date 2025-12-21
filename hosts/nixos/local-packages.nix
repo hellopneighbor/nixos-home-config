@@ -12,5 +12,6 @@
       htop
       iotop
       iftop
+      usbutils
     ];
 }
