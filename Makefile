@@ -7,4 +7,4 @@ build:
 	sudo nixos-rebuild boot --flake .#$(HOST)
 
 home:
-	nix run home-manager -- boot --flake .#$(MAKE_USER)
+	nix run home-manager -- switch --flake .#$(MAKE_USER)
