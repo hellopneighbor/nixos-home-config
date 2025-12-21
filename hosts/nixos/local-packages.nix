@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   nixpkgs.config.allwUnfree = true;
-  environments.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
       gnumake
       busybox
       gnumake
