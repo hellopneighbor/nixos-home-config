@@ -15,8 +15,7 @@
 
         pkgs = "nvim ${flakeDir}/nixos/packages.nix";
 
-        r = "ranger";
-        v = "nvim";
+        v = "vim";
         se = "sudoedit";
         microfetch = "microfetch && echo";
 
@@ -29,7 +28,7 @@
       };
 
     history.size = 10000;
-    history.path = "${config.xdg.dataHome}/zsh/history";
+    history.path = "${config.xdg.dataHome}/.zsh_history";
 
     initExtra = ''
       # Start Tmux automatically if not already running. No Tmux in TTY
