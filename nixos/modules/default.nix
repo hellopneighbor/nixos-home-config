@@ -1,0 +1,18 @@
+{
+  imports = [
+    ./kernel.nix
+    ./audio.nix
+    ./xserver.nix
+    ./bluetooth.nix
+    ./boot.nix
+    ./env.nix
+    ./home-manager.nix
+    ./net.nix
+    ./nh.nix
+    ./nix.nix
+    ./timezone.nix
+    ./user.nix
+    ./zram.nix
+    ./fonts.nix
+  ];
+}
