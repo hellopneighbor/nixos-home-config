@@ -14,5 +14,6 @@
     ./user.nix
     ./zram.nix
     ./fonts.nix
+    ./throne.nix
   ];
 }

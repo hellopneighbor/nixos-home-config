@@ -14,5 +14,6 @@
       iotop
       iftop
       usbutils
+      cmake
     ];
 }
