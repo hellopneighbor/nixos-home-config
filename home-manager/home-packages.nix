@@ -8,13 +8,12 @@
     blender
     lmms
     fastfetch
-    jetbrains.pycharm-community-src
     dosbox-x
     python314
     yandex-music
     virtualbox
     jdk21
-    wineWowPackages.stable
+    wineWow64Packages.stable
     winetricks
     qbittorrent
     lutris
