@@ -1,8 +1,8 @@
 
-.PHONY: home 
+.PHONY: home
 .DEFAULT_GOAL := home
 MAKE_USER := $(shell whoami)
-MY_HOST := $(shell hostnmame)
+MY_HOST := $(shell hostname)
 
 build:
 	sudo nixos-rebuild switch --flake .#$(MY_HOST)

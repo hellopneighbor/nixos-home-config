@@ -2,19 +2,17 @@
 
 {
   fonts = {
-    enableDefaultFonts = true;
-    fonts = with pkgs; [
-      #font-awesome_4
-      corefonts # Microsoft free fonts
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      corefonts
       dejavu_fonts
       fira
       fira-mono
       line-awesome
       google-fonts
-      inconsolata # monospaced
+      inconsolata
       libertine
       mononoki
-      # nerdfonts
       nerd-fonts._0xproto
       nerd-fonts.droid-sans-mono
       open-dyslexic
@@ -26,7 +24,8 @@
       source-serif-pro
       ttf_bitstream_vera
       ubuntu-classic
-      unifont # some international languages
+      unifont
+      monocraft
     ];
     fontconfig = {
       antialias = true;
@@ -34,11 +33,10 @@
       hinting.enable = true;
       hinting.autohint = true;
       defaultFonts = {
-        monospace = [ "Source Code Pro" ];
-        sansSerif = [ "Source Sans Pro" ];
+        monospace = [ "Monocraft" ];
+        sansSerif = [ "Monocraft" ];
         serif = [ "Source Serif Pro" ];
       };
     };
   };
 }
-

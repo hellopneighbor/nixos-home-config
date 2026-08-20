@@ -15,5 +15,7 @@
     ./zram.nix
     ./fonts.nix
     ./throne.nix
+    ./virtualbox.nix
+    ./tailscale.nix
   ];
 }

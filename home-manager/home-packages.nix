@@ -10,7 +10,6 @@
     fastfetch
     dosbox-x
     python314
-    yandex-music
     virtualbox
     jdk21
     wineWow64Packages.stable
@@ -18,7 +17,6 @@
     qbittorrent
     lutris
     obs-studio
-    simplescreenrecorder
     ];
 
 }

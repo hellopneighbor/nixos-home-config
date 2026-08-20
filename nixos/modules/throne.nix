@@ -5,4 +5,8 @@
       enable = true;
     };
   };
- }
+
+  boot.kernelModules = [ "tun" ];
+
+  networking.firewall.checkReversePath = "loose";
+}

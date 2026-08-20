@@ -1,0 +1,40 @@
+{
+  "log": { "level": "info" },
+  "dns": {
+    "servers": [
+      { "tag": "google", "address": "8.8.8.8" }
+    ],
+    "rules": [
+      { "protocol": "dns", "action": "route", "server": "google" }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "address": [ "172.19.0.1/30" ],
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "proxy",
+      "server": "194.147.148.240",
+      "server_port": 37078,
+      "uuid": "f8e2b2a8-933f-4da8-9a3e-2c84841d5828",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "utls": { "enabled": true, "fingerprint": "chrome" },
+        "reality": {
+          "enabled": true,
+          "public_key": "EF0khaTG9QOoVmplskf8P5mSlfKncRdrpa3oH4ZLCTU",
+          "short_id": "652ef9"
+        }
+      }
+    }
+  ]
+}

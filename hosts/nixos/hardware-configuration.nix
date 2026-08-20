@@ -29,9 +29,14 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/STORAGE" =
+    { device = "/dev/disk/by-uuid/e8f44eec-8d73-4236-84c9-442508babaf1";
+      fsType = "ext4";
+      options = [ "users" "nofail" "x-systemd.automount" "x-systemd.device-timeout=5s" ];
+    };
+
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
-
