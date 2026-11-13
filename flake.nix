@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    lazyvim.url = "github:pfassina/lazyvim-nix"; 
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -10,7 +11,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, lazyvim, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "26.05";
     user = "eugen";
@@ -28,7 +29,7 @@
       modules = [
         ./hosts/${hostname}/configuration.nix
       ];
-    }; # ИСПРАВЛЕНО: Добавлена точка с запятой перед 'in'
+    }; 
 
   in {
     nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
@@ -41,7 +42,7 @@
     homeConfigurations."${user}" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
       extraSpecialArgs = {
-        inherit inputs homeStateVersion user;
+        inherit inputs homeStateVersion user lazyvim;
       };
 
       modules = [

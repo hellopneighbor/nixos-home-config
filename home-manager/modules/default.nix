@@ -4,7 +4,7 @@
     ./chromium.nix
     ./git.nix
     ./lazygit.nix
-    ./vim.nix
+    ./lazyvim.nix
     ./tmux.nix
     ./zsh.nix
   ];

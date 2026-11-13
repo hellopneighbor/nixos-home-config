@@ -1,12 +1,14 @@
+{ pkgs, ... }:
+
 {
-  programs.throne = {
+  programs.clash-verge = {
     enable = true;
-    tunMode = {
-      enable = true;
-    };
+    package = pkgs.clash-verge-rev;
+    tunMode = true;
+    serviceMode = true;
   };
 
-  boot.kernelModules = [ "tun" ];
-
   networking.firewall.checkReversePath = "loose";
+
+  services.resolved.enable = true;
 }

@@ -14,8 +14,14 @@
     ./user.nix
     ./zram.nix
     ./fonts.nix
-    ./throne.nix
-    ./virtualbox.nix
     ./tailscale.nix
+    ./flatpak.nix
+    ./uwsm.nix
+    ./steam.nix
+    ./kvm.nix
+    ./throne.nix
+    ./ollama.nix
+    ./obs.nix
+    ./vmware.nix
   ];
 }

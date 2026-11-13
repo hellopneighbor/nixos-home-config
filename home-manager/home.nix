@@ -1,4 +1,4 @@
-{ homeStateVersion, user, ... }: {
+{ homeStateVersion, user, lazyvim, ... }: {
   imports = [
     ./modules
     ./home-packages.nix

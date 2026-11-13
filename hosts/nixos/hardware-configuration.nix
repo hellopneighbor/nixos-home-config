@@ -29,10 +29,10 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/STORAGE" =
-    { device = "/dev/disk/by-uuid/e8f44eec-8d73-4236-84c9-442508babaf1";
+  fileSystems."/storage" =
+    { device = "/dev/disk/by-uuid/ecd26839-8041-4803-9232-82b0f1287ff4";
       fsType = "ext4";
-      options = [ "users" "nofail" "x-systemd.automount" "x-systemd.device-timeout=5s" ];
+      options = [ "defaults" "nofail" "exec" ];
     };
 
   swapDevices = [ ];

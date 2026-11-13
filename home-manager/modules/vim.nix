@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  programs.vim = {
+  programs.vim  = {
     enable = true;
   };
 }

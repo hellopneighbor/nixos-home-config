@@ -7,6 +7,7 @@
       font = {
         builtin_box_drawing = false;
         normal = {
+          family = "JetBrainsMono Nerd Font";
           style = lib.mkForce "Bold";
         };
       };
