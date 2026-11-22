@@ -18,10 +18,14 @@
     ./flatpak.nix
     ./uwsm.nix
     ./steam.nix
+    ./x11-compat.nix
     ./kvm.nix
     ./throne.nix
     ./ollama.nix
+    ./ai.nix
     ./obs.nix
     ./vmware.nix
+    ./waydroid.nix
+    ./scrcpy.nix
   ];
 }

@@ -6,9 +6,9 @@ MY_HOST := $(shell hostname)
 
 build:
 	sudo nixos-rebuild switch --flake .#$(MY_HOST)
-
 home:
 	nix run home-manager -- switch --flake .#$(MAKE_USER)
-
+clean:
+	nix-collect-garbage -d
 link:
 	ln -sf $(shell pwd)/home-manager/home-packages.nix	~/Desktop/packages.nix

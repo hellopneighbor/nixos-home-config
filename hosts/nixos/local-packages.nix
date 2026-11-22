@@ -15,5 +15,9 @@
       iftop
       usbutils
       cmake
+      vulkan-tools
+      cabextract
+      unzip
+      gamemode
     ];
 }

@@ -36,5 +36,7 @@
     zsh-powerlevel10k
     python313Packages.ipython
     liberation_ttf
+    spotube
+    xenia-canary
     ];
 }

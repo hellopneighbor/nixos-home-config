@@ -19,7 +19,8 @@
 
   users.users.eugen = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "kvm" "vboxusers" "adbusers" ];
+    # "ydotool" — access to the virtual input daemon used by the AI game agent
+    extraGroups = [ "networkmanager" "wheel" "kvm" "vboxusers" "adbusers" "ydotool" ];
   };
 
   environment.systemPackages = [
